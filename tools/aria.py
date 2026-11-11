@@ -133,6 +133,9 @@ def cmd_doctor(_):
 
 
 def main():
+    for stream in (sys.stdout, sys.stderr):  # the engine prints arrows and quotes; Windows consoles default to cp1252
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     if len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help", "help"):
         print(__doc__)
         return

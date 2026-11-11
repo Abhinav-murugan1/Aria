@@ -138,7 +138,7 @@ function Captions({ f, hide }: { f: number; hide?: (i: number) => boolean }) {
   const words = LINES[i].words;
   const cur = words.reduce((n, w, k) => (f >= fr(w.s) ? k : n), -1);
   return (
-    <div style={{ position: "absolute", left: 160, top: 930, width: 1600, display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 14 }}>
+    <div style={{ position: "absolute", left: 160, top: 820, width: 1600, display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 14 }}>
       {words.map((w, k) => (
         <span key={k} style={{ fontFamily: BODY, fontWeight: 700, fontSize: 46, color: k === cur ? AMBER : k < cur ? INK : "#6e6888",
           transform: `scale(${k === cur ? 1 + 0.08 * (1 - ramp(f, fr(w.s), fr(w.s) + 6)) : 1})` }}>{w.w}</span>
@@ -175,7 +175,7 @@ function Title() {
         <Blocks f={f} rise={1} />
         <Word3D f={f} at={WORD(1, "aria") - 6} />
       </Stage>
-      <div style={{ position: "absolute", left: 0, top: 120, width: W, textAlign: "center", fontFamily: BODY, fontSize: 34, letterSpacing: 8, color: DIM,
+      <div style={{ position: "absolute", left: 0, top: 130, width: W, textAlign: "center", fontFamily: BODY, fontSize: 34, letterSpacing: 8, color: DIM,
         opacity: ramp(f, WORD(1, "aria"), WORD(1, "aria") + 12) }}>A CLAUDE CODE SKILL FOR VIDEO + VOICE</div>
       <div style={{ position: "absolute", left: 0, top: 740, width: W, display: "flex", flexDirection: "row", justifyContent: "center", gap: 28 }}>
         {parts.map(([label, cue, c]) => <Chip key={label} text={label} color={c} f={f} at={WORD(2, cue)} size={38} />)}
@@ -213,17 +213,17 @@ function Voice() {
   return (
     <AbsoluteFill style={{ backgroundColor: BG }}>
       <Stage f={f} eye={[0, 1.4, 10]} look={[0, 0, -4]} bloom={0.4}><Blocks f={f} rise={0.6} /></Stage>
-      <div style={{ position: "absolute", left: 0, top: 70, width: W, textAlign: "center", fontFamily: HEAD, fontSize: 76, color: INK, opacity: head,
+      <div style={{ position: "absolute", left: 0, top: 125, width: W, textAlign: "center", fontFamily: HEAD, fontSize: 64, color: INK, opacity: head,
         transform: `translateY(${(1 - ease((f - S.voice) / 14)) * 30}px)` }}>
         aria <span style={{ color: PINK }}>voice</span> <span style={{ color: DIM, fontSize: 44 }}>· emotion you can type</span>
       </div>
-      <div style={{ position: "absolute", left: 130, top: 210, width: 1660, display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 40 }}>
+      <div style={{ position: "absolute", left: 130, top: 228, width: 1660, display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 40 }}>
         {EMO.map((e) => {
           const at = L(e.line) - 8;
           const on = f >= L(e.line) && f <= LE(e.line) + 6;
           const m = meter[e.key];
           return (
-            <div key={e.tag} style={{ width: 700, height: 250, borderRadius: 28, padding: 34, backgroundColor: on ? "#171230" : "#0f0c1f",
+            <div key={e.tag} style={{ width: 700, height: 236, borderRadius: 28, padding: 34, backgroundColor: on ? "#171230" : "#0f0c1f",
               border: `3px solid ${on ? e.color : "#2a2445"}`, opacity: ramp(f, at, at + 8, 0, 1) * (f < at ? 0 : 1), transform: `scale(${0.6 + 0.4 * Math.max(0, pop(f, at, 12))})`,
               display: "flex", flexDirection: "column", gap: 12 }}>
               <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
@@ -250,7 +250,7 @@ function Check() {
   const cur = big.reduce((n, w, k) => (f >= fr(w.s) ? k : n), -1);
   return (
     <AbsoluteFill style={{ backgroundColor: BG }}>
-      <div style={{ position: "absolute", left: 0, top: 70, width: W, textAlign: "center", fontFamily: HEAD, fontSize: 70, color: INK, opacity: ramp(f, S.check, S.check + 10) }}>
+      <div style={{ position: "absolute", left: 0, top: 125, width: W, textAlign: "center", fontFamily: HEAD, fontSize: 64, color: INK, opacity: ramp(f, S.check, S.check + 10) }}>
         heard back, <span style={{ color: CYAN }}>word by word</span>
       </div>
       <div style={{ position: "absolute", left: 260, top: 230, width: 1400, height: 400, borderRadius: 24, backgroundColor: "#0f0c1f", border: "2px solid #2a2445",
@@ -336,7 +336,7 @@ function Pipe() {
   return (
     <AbsoluteFill style={{ backgroundColor: BG }}>
       <Stage f={f} eye={[0, 1.4, 10]} look={[0, 0, -4]} bloom={0.4}><Blocks f={f} rise={0.6} /></Stage>
-      <div style={{ position: "absolute", left: 120, top: 120, width: 1680, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+      <div style={{ position: "absolute", left: 120, top: 140, width: 1680, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
         {nodes.map(([n, cue], i) => {
           const lit = f >= WORD(11, cue);
           return (
@@ -373,7 +373,7 @@ function End() {
         <div style={{ fontFamily: HEAD, fontSize: 150, color: INK, marginTop: 10 }}>made with <span style={{ color: VIOLET }}>aria</span></div>
         <div style={{ fontFamily: MONO, fontSize: 36, color: CYAN, marginTop: 24 }}>voice · captions · 3D · music · render · check</div>
       </div>
-      <div style={{ position: "absolute", left: 260, top: 70, width: 1400, height: 820, borderRadius: 20, backgroundColor: "#ffffff", opacity: ramp(f, shot, shot + 10),
+      <div style={{ position: "absolute", left: 330, top: 128, width: 1260, height: 700, borderRadius: 20, backgroundColor: "#ffffff", opacity: ramp(f, shot, shot + 10),
         transform: `scale(${zoom}) translateY(${(1 - ease((f - shot) / 20)) * 60}px)`, display: "flex", flexDirection: "column", overflow: "hidden", border: "2px solid #3a3456" }}>
         <div style={{ height: 60, backgroundColor: "#1f1b2e", display: "flex", flexDirection: "row", alignItems: "center", paddingLeft: 24, gap: 12 }}>
           <div style={{ width: 16, height: 16, borderRadius: 8, backgroundColor: "#fb7185" }} />
@@ -381,9 +381,9 @@ function End() {
           <div style={{ width: 16, height: 16, borderRadius: 8, backgroundColor: "#4ade80" }} />
           <div style={{ marginLeft: 24, padding: "6px 22px", borderRadius: 10, backgroundColor: "#0d0b1a", fontFamily: MONO, fontSize: 24, color: INK }}>{`https://${REPO}`}</div>
         </div>
-        <img src={staticFile("github.png")} style={{ width: 1400, height: 760, objectFit: "cover", objectPosition: "top" }} />
+        <img src={staticFile("github.png")} style={{ width: 1260, height: 640, objectFit: "cover", objectPosition: "top" }} />
       </div>
-      <div style={{ position: "absolute", left: 0, top: 905, width: W, textAlign: "center", fontFamily: HEAD, fontSize: 52, color: INK, opacity: ramp(f, shot + 30, shot + 42) }}>
+      <div style={{ position: "absolute", left: 0, top: 860, width: W, textAlign: "center", fontFamily: HEAD, fontSize: 52, color: INK, opacity: ramp(f, shot + 30, shot + 42) }}>
         <span style={{ color: VIOLET }}>{REPO}</span>
       </div>
     </AbsoluteFill>
