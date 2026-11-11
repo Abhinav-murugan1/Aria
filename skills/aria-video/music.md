@@ -1,4 +1,4 @@
-# aria music and sound
+# Aria music and sound
 
 Original scores are written in code with Tone, rendered with the picture, so every hit can land on a word.
 

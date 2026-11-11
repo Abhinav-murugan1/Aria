@@ -1,11 +1,11 @@
 ---
 name: aria-video
-description: aria's video generation. Write scenes as React/TypeScript compositions (2D motion graphics, karaoke captions, 3D with lights, materials, Text3D and bloom), cue them on narration words from captions.json, score original music with Tone, mix to -14 LUFS, render on the GPU, check the export (clipped text, safe areas, contrast, loudness, blotching) and encode share copies. Use for making or fixing any aria video, shorts/reels/TikTok 9:16, 16:9 films, explainers, promos, story videos, motion graphics or 3D scenes rendered from code.
+description: Aria's video generation. Write scenes as React/TypeScript compositions (2D motion graphics, karaoke captions, 3D with lights, materials, Text3D and bloom), cue them on narration words from captions.json, score original music with Tone, mix to -14 LUFS, render on the GPU, check the export (clipped text, safe areas, contrast, loudness, blotching) and encode share copies. Use for making or fixing any Aria video, shorts/reels/TikTok 9:16, 16:9 films, explainers, promos, story videos, motion graphics or 3D scenes rendered from code.
 ---
 
-# aria video
+# Aria video
 
-A composition is a React function of the frame number: give it frame N, it draws frame N. aria renders it on the
+A composition is a React function of the frame number: give it frame N, it draws frame N. Aria renders it on the
 GPU (2D UI and a 3D world in the same frame), mixes its audio and checks the export.
 
 Read [sdk.md](sdk.md) for the imports, [3d.md](3d.md) before any 3D, [music.md](music.md) before scoring.

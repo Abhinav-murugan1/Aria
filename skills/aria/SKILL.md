@@ -1,11 +1,11 @@
 ---
 name: aria
-description: Make finished videos with voices from code using aria. aria writes the script, narrates it with an expressive cloned voice (emotion tags, laughs, whispers), checks every line by speech recognition, times captions to the exact word, scores original music, and renders React/TypeScript scenes (2D motion graphics and 3D) on the GPU into a checked, share-ready MP4. Use when the user says aria, or asks for a video, a short, an explainer, a story video, a promo, a narrated slideshow, voiceover, narration, TTS with emotion, captions, or motion graphics from code. Routes to aria-video (picture) and aria-voice (narration).
+description: Make finished videos with voices from code using Aria. Aria writes the script, narrates it with an expressive cloned voice (emotion tags, laughs, whispers), checks every line by speech recognition, times captions to the exact word, scores original music, and renders React/TypeScript scenes (2D motion graphics and 3D) on the GPU into a checked, share-ready MP4. Use when the user says Aria (any case), or asks for a video, a short, an explainer, a story video, a promo, a narrated slideshow, voiceover, narration, TTS with emotion, captions, or motion graphics from code. Routes to aria-video (picture) and aria-voice (narration).
 ---
 
-# aria
+# Aria
 
-aria is one pipeline for a finished video: **script → voice → captions → scenes → render → check → share**.
+Aria is one pipeline for a finished video: **script → voice → captions → scenes → render → check → share**.
 Every step is code or a command, so every step can be re-run, diffed and fixed.
 
 Two focused skills do the work. Read the one you need before touching its files:
@@ -15,7 +15,7 @@ Two focused skills do the work. Read the one you need before touching its files:
 ## Setup (once)
 
 ```powershell
-git clone <this repo> aria; cd aria
+git clone https://github.com/Abhinav-murugan1/Aria; cd Aria
 ./install.ps1            # render engine + skills into ~/.claude/skills + `aria` on PATH
 ./install.ps1 -Voice     # + the voice environment (Python 3.11, CUDA torch, Chatterbox Turbo, faster-whisper, Kokoro)
 aria doctor              # engine, ffmpeg, GPU, voice: all should say ok
@@ -40,7 +40,7 @@ it runs on CPU, slowly.
 6. **Look before you render.** `aria still edit.tsx 0,120,400` and open the PNGs. Text fits, nothing overlaps,
    nothing sits in a platform's UI zone, 3D is lit and in frame.
 7. **Make it.** `aria make edit.tsx NAME` renders on the GPU, writes a share copy and checks it (clipped text,
-   safe areas, contrast, loudness, freezes, blotching). P0/P1 findings fail: fix and make again as `NAME-v2`.
+   safe areas, contrast, loudness, freezes, blotching). P0/P1 findings fail: fix and make again as `NAME-v2`. At most three versions per request: then stop and report what is left.
 8. **Deliver** `out/NAME.mp4` (the share copy). Keep every version; never render over an old one.
 
 ## Rules that keep quality high

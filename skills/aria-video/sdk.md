@@ -1,4 +1,4 @@
-# aria SDK: what to import
+# Aria SDK: what to import
 
 Every composition imports from the project's `aria/` bridge. Main entry `./aria`; the rest by area.
 

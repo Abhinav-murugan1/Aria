@@ -1,8 +1,8 @@
-# aria
+# Aria
 
 **Finished videos with real-sounding voices, made from code, by Claude Code.**
 
-aria is a set of Claude Code skills plus a small CLI. Ask Claude for a video and aria takes it the whole way:
+Aria is a set of Claude Code skills plus a small CLI. Ask Claude for a video and Aria takes it the whole way:
 
 ```
 script  →  voice  →  captions  →  scenes  →  render  →  check  →  share
@@ -14,9 +14,9 @@ script  →  voice  →  captions  →  scenes  →  render  →  check  →  sh
 - **aria-video**: scenes written as React + TypeScript: karaoke captions, motion graphics, real 3D (lights,
   materials, 3D text, bloom), an original score in code, all cued to the exact spoken word, rendered on your GPU,
   checked for clipped text, safe areas, contrast, loudness and compression artefacts, and encoded into a share copy.
-- **aria**: the umbrella skill that runs the pipeline and routes to the two above.
+- **Aria**: the umbrella skill that runs the pipeline and routes to the two above.
 
-The showcase film in [`examples/showcase`](examples/showcase) was made entirely with aria: its narration, its
+The showcase film in [`examples/showcase`](examples/showcase) was made entirely with Aria: its narration, its
 captions, its 3D, its music and its render. Watch it in the
 [latest release](../../releases/latest).
 
@@ -25,7 +25,7 @@ captions, its 3D, its music and its render. Watch it in the
 Windows 10/11 (PowerShell), a GPU with Vulkan or DX12 and `ffmpeg` on PATH. Voice wants an NVIDIA GPU (~6 GB VRAM).
 
 ```powershell
-git clone https://github.com/Abhinav-murugan1/aria; cd aria
+git clone https://github.com/Abhinav-murugan1/Aria; cd Aria
 ./install.ps1            # render engine + skills (~/.claude/skills) + the aria command
 ./install.ps1 -Voice     # + voice environment: Python 3.11, CUDA torch, Chatterbox Turbo, faster-whisper, Kokoro
 aria doctor
@@ -41,8 +41,34 @@ Just ask:
 
 > re-voice line 3 with more excitement and make the title land on the word "now"
 
-Claude loads the aria skills, writes `script.json` and `edit.tsx`, voices, renders, looks at stills, checks the
+Claude loads the Aria skills, writes `script.json` and `edit.tsx`, voices, renders, looks at stills, checks the
 export and hands you `out/NAME.mp4`.
+
+### Slash commands
+
+`install.ps1` also installs these into `~/.claude/commands/` (only `aria-*.md` files; nothing else there is touched):
+
+| command | does |
+|---|---|
+| `/aria`, `/aria-video`, `/aria-voice` | load the skills themselves |
+| `/aria-help` | list every Aria command, read from what is installed |
+| `/aria-short TOPIC [9:16\|16:9\|1:1] [voice] [length]` | a finished video end to end (9:16 by default) |
+| `/aria-new NAME [shape]` | an empty project from the template |
+| `/aria-narrate SCRIPT.json [OUT_DIR]` | voice a script: emotion tags, hearing check, word-timed captions |
+| `/aria-retake LINES [direction]` | re-speak lines, e.g. `/aria-retake 3,7 more excited` |
+| `/aria-preset NAME KOKORO_VOICE\|REC.wav` | a new expressive voice preset (recordings need your consent) |
+| `/aria-emotion WAV...` | the emotion meter, explained |
+| `/aria-preview [EDIT.tsx]` | stills of every scene on one contact sheet, reviewed |
+| `/aria-make [EDIT.tsx] [NAME]` | render, share copy, export check, fix (at most 3 versions) |
+| `/aria-check VIDEO.mp4` | the export check on any video, with a fit-to-publish verdict |
+| `/aria-doctor` | check the environment and say how to fix it |
+
+The command-line tool is lowercase `aria` by design (commands are typed); the product is Aria.
+
+### Uninstall
+
+Delete `~/.claude/skills/aria`, `~/.claude/skills/aria-video`, `~/.claude/skills/aria-voice` and
+`~/.claude/commands/aria-*.md`, remove the repo's `bin` folder from your user PATH, and delete the clone.
 
 ## Use it by hand
 
@@ -112,4 +138,4 @@ examples/showcase/   the showcase film: script.json, edit.tsx, narration
 Voice models: [Chatterbox / Chatterbox Turbo](https://github.com/resemble-ai/chatterbox) (Resemble AI, MIT),
 [faster-whisper](https://github.com/SYSTRAN/faster-whisper) (MIT),
 [Kokoro](https://github.com/thewh1teagle/kokoro-onnx) (Apache-2.0). Music in code: [Tone.js](https://tonejs.github.io/).
-aria's own code and skills: MIT.
+Aria's own code and skills: MIT.

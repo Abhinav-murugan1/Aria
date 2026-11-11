@@ -1,11 +1,11 @@
 ---
 name: aria-voice
-description: aria's voice generation. Expressive narration with a cloned voice (Chatterbox Turbo) driven by emotion and sound tags ([happy], [whispering], [dramatic], [fear], [chuckle], [sigh], [gasp]...), every take verified by speech recognition (faster-whisper) and re-spoken until it is heard right, word-level caption timing, voice presets, an emotion meter, and fast Kokoro drafts. Use for narration, voiceover, TTS, "more emotion", "sounds robotic/flat", voice cloning, captions timing, or when an aria video needs a voice.
+description: Aria's voice generation. Expressive narration with a cloned voice (Chatterbox Turbo) driven by emotion and sound tags ([happy], [whispering], [dramatic], [fear], [chuckle], [sigh], [gasp]...), every take verified by speech recognition (faster-whisper) and re-spoken until it is heard right, word-level caption timing, voice presets, an emotion meter, and fast Kokoro drafts. Use for narration, voiceover, TTS, "more emotion", "sounds robotic/flat", voice cloning, captions timing, or when an Aria video needs a voice.
 ---
 
-# aria voice
+# Aria voice
 
-The voice is half the video. aria's narrator is **Chatterbox Turbo** cloning an *expressive* voice preset, steered
+The voice is half the video. Aria's narrator is **Chatterbox Turbo** cloning an *expressive* voice preset, steered
 line by line with inline tags, and policed by **faster-whisper**. Output is a narration track plus `captions.json`
 with every word's start and end, which the picture cues on.
 
