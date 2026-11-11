@@ -46,6 +46,8 @@ Then just ask:
 
 > make a 16:9 launch video for my app, dramatic voice, 3D logo reveal, upbeat music
 
+> brag about this project: 20 seconds, cinematic
+
 > re-voice line 3 with more excitement and make the title land on the word "now"
 
 ## Slash commands
@@ -55,6 +57,7 @@ Then just ask:
 | `/aria`, `/aria-video`, `/aria-voice` | load the skills themselves |
 | `/aria-help` | list every Aria command |
 | `/aria-short TOPIC [9:16\|16:9\|1:1] [voice] [length]` | a finished video end to end (9:16 by default) |
+| `/aria-brag [project dir\|URL] [--tone T] [--format F] [--duration S] [--no-voice]` | a 20 s launch video of your project or site: narration, music, poster, share copy |
 | `/aria-new NAME [shape]` | an empty project from the template |
 | `/aria-narrate SCRIPT.json [OUT_DIR]` | voice a script: emotion tags, hearing check, word-timed captions |
 | `/aria-retake LINES [direction]` | re-speak lines, e.g. `/aria-retake 3,7 more excited` |
@@ -82,6 +85,8 @@ The command-line tool is lowercase `aria` (`aria new`, `aria voice`, `aria make`
 Voice models: [Chatterbox / Chatterbox Turbo](https://github.com/resemble-ai/chatterbox) (Resemble AI, MIT),
 [faster-whisper](https://github.com/SYSTRAN/faster-whisper) (MIT),
 [Kokoro](https://github.com/thewh1teagle/kokoro-onnx) (Apache-2.0). Music in code: [Tone.js](https://tonejs.github.io/).
+The `aria-brag` launch-video method is adapted from [/brag](https://github.com/latent-spaces/brag) by Shunit
+Haviv Hakimi (MIT; see [skills/aria-brag/NOTICE](skills/aria-brag/NOTICE)).
 
 ## License
 

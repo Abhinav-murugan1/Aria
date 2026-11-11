@@ -2,7 +2,7 @@
   "name": "aria",
   "displayName": "Aria",
   "description": "Finished videos with expressive voices, made from code: script, emotional narration checked by speech recognition, word-timed captions, React/TypeScript scenes (2D and 3D), original music, GPU render, export check and a share-ready MP4.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Abhinav Murugan",
     "url": "https://github.com/Abhinav-murugan1"

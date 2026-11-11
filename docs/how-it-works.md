@@ -55,7 +55,7 @@ call: agents are told to confirm before any upload, upload as private first and 
 
 | path | role |
 |---|---|
-| `skills/aria`, `skills/aria-video`, `skills/aria-voice` | the agent guides (Claude Code skills) |
+| `skills/aria`, `skills/aria-video`, `skills/aria-voice`, `skills/aria-brag` | the agent guides (Claude Code skills) |
 | `AGENTS.md` | the same guidance for every other agent |
 | `commands/` | slash commands |
 | `tools/aria.py` | the `aria` CLI |

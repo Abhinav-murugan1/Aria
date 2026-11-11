@@ -1,6 +1,6 @@
 {
   "name": "aria",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Finished videos with expressive voices, made from code: narration, captions, 2D/3D scenes, music, GPU render and a checked MP4.",
   "contextFileName": "AGENTS.md"
 }

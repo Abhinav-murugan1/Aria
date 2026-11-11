@@ -30,12 +30,12 @@ if ($EngineOnly) {
 } else {
   $skills = Join-Path $HOME ".claude\skills"
   New-Item -ItemType Directory -Force $skills | Out-Null
-  foreach ($s in "aria", "aria-video", "aria-voice") {
+  foreach ($s in "aria", "aria-video", "aria-voice", "aria-brag") {
     $dst = Join-Path $skills $s
     if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
     Copy-Item -Recurse (Join-Path $Root "skills\$s") $dst
   }
-  Write-Host "aria: skills installed to $skills (aria, aria-video, aria-voice)"
+  Write-Host "aria: skills installed to $skills (aria, aria-video, aria-voice, aria-brag)"
 
   # 2b. slash commands: only aria-*.md files are written; nothing else in the folder is touched
   $commands = Join-Path $HOME ".claude\commands"

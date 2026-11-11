@@ -10,8 +10,8 @@
     {
       "name": "aria",
       "source": "./",
-      "description": "Aria skills (aria, aria-video, aria-voice) and the /aria-* slash commands.",
-      "version": "0.1.0"
+      "description": "Aria skills (aria, aria-video, aria-voice, aria-brag) and the /aria-* slash commands.",
+      "version": "0.2.0"
     }
   ]
 }

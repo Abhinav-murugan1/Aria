@@ -32,9 +32,9 @@ the skills and slash commands into `~/.claude` (the older Claude Code route belo
 /plugin marketplace add Abhinav-murugan1/Aria
 /plugin install aria@aria
 ```
-The plugin brings the skills `aria`, `aria-video`, `aria-voice` and the `/aria-*` slash commands (shown as
-`/aria-short`, or `/aria:aria-short` when another command has the same name). Then run the toolchain step above with
-`-EngineOnly`.
+The plugin brings the skills `aria`, `aria-video`, `aria-voice`, `aria-brag` (launch videos) and the `/aria-*`
+slash commands (shown as `/aria-short`, or `/aria:aria-short` when another command has the same name). Then run the
+toolchain step above with `-EngineOnly`.
 
 **Pick one route, not both.** `./install.ps1` without `-EngineOnly` registers the same skills and commands by
 copying them into `~/.claude/skills` and `~/.claude/commands`. Doing both loads every skill twice. If you used that
