@@ -25,7 +25,7 @@ captions, its 3D, its music and its render. Watch it in the
 Windows 10/11 (PowerShell), a GPU with Vulkan or DX12 and `ffmpeg` on PATH. Voice wants an NVIDIA GPU (~6 GB VRAM).
 
 ```powershell
-git clone https://github.com/<you>/aria; cd aria
+git clone https://github.com/Abhinav-murugan1/aria; cd aria
 ./install.ps1            # render engine + skills (~/.claude/skills) + the aria command
 ./install.ps1 -Voice     # + voice environment: Python 3.11, CUDA torch, Chatterbox Turbo, faster-whisper, Kokoro
 aria doctor
