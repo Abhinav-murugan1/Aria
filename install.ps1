@@ -33,6 +33,14 @@ foreach ($s in "aria", "aria-video", "aria-voice") {
 }
 Write-Host "aria: skills installed to $skills (aria, aria-video, aria-voice)"
 
+# 2b. slash commands: only aria-*.md files are written; nothing else in the folder is touched
+$commands = Join-Path $HOME ".claude\commands"
+New-Item -ItemType Directory -Force $commands | Out-Null
+foreach ($c in Get-ChildItem (Join-Path $Root "commands") -Filter "aria-*.md") {
+  Copy-Item -Force $c.FullName (Join-Path $commands $c.Name)
+  Write-Host "aria: installed /$($c.BaseName)"
+}
+
 # 3. the aria command on PATH
 $bin = Join-Path $Root "bin"
 $path = [Environment]::GetEnvironmentVariable("Path", "User")

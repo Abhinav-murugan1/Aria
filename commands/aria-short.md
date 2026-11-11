@@ -1,0 +1,7 @@
+---
+description: Make a finished Aria video end to end from a topic (9:16 by default)
+argument-hint: TOPIC [9:16|16:9|1:1] [aria-heart|aria-adam] [length]
+---
+Load the `aria` skill and follow its pipeline to make a finished video about: $ARGUMENTS
+Shape defaults to 9:16, voice to aria-heart, length to 30-45 s (45-75 s for 16:9). State any guess in one line.
+Stop after at most three render versions and report what is left.

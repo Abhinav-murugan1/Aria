@@ -116,7 +116,7 @@ def cmd_doctor(_):
     ok = True
     try:
         e = engine_path()
-        print(f"engine   ok   {e}")
+        print("engine   ok")
     except SystemExit as x:
         print(f"engine   MISSING  {x}")
         ok = False
