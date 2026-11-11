@@ -1,0 +1,40 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aria",
+  "version": "0.1.0",
+  "description": "Finished videos with expressive voices, made from code: script, emotional narration checked by speech recognition, word-timed captions, React/TypeScript scenes (2D and 3D), original music, GPU render, export check and a share-ready MP4.",
+  "author": {
+    "name": "Abhinav Murugan",
+    "url": "https://github.com/Abhinav-murugan1"
+  },
+  "homepage": "https://github.com/Abhinav-murugan1/Aria",
+  "repository": "https://github.com/Abhinav-murugan1/Aria",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "voice",
+    "narration",
+    "tts",
+    "captions",
+    "motion-graphics",
+    "3d",
+    "shorts"
+  ],
+  "extensions": {
+    "com.openai.interface": {
+      "displayName": "Aria",
+      "shortDescription": "Finished videos with expressive voices, made from code.",
+      "longDescription": "Aria writes the script, narrates it with an expressive cloned voice (emotion tags, laughs, whispers), checks every line by speech recognition, times captions to the exact word, scores original music and renders React/TypeScript scenes (2D motion graphics and 3D) on your GPU into a checked, share-ready MP4. Everything runs locally.",
+      "developerName": "Abhinav Murugan",
+      "category": "Creativity",
+      "websiteURL": "https://github.com/Abhinav-murugan1/Aria",
+      "defaultPrompt": [
+        "Make a 30 second vertical short explaining why we procrastinate, warm narrator, with captions",
+        "Make a 16:9 launch video for my app, dramatic voice, 3D logo reveal, upbeat music",
+        "Re-voice line 3 with more excitement and make the title land on the word \"now\""
+      ],
+      "composerIcon": "./assets/icon.png",
+      "logo": "./assets/icon.png"
+    }
+  }
+}

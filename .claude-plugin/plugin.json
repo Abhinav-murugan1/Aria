@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "aria",
+  "displayName": "Aria",
+  "version": "0.1.0",
+  "description": "Finished videos with expressive voices, made from code: script, emotional narration checked by speech recognition, word-timed captions, React/TypeScript scenes (2D and 3D), original music, GPU render, export check and a share-ready MP4.",
+  "author": {
+    "name": "Abhinav Murugan",
+    "url": "https://github.com/Abhinav-murugan1"
+  },
+  "homepage": "https://github.com/Abhinav-murugan1/Aria",
+  "repository": "https://github.com/Abhinav-murugan1/Aria",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "voice",
+    "narration",
+    "tts",
+    "captions",
+    "motion-graphics",
+    "3d",
+    "shorts"
+  ],
+  "icon": "./assets/icon.png"
+}

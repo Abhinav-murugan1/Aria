@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "aria",
+  "description": "Aria: finished videos with expressive voices, made from code by your coding agent.",
+  "owner": {
+    "name": "Abhinav Murugan",
+    "url": "https://github.com/Abhinav-murugan1"
+  },
+  "plugins": [
+    {
+      "name": "aria",
+      "source": "./",
+      "description": "Aria skills (aria, aria-video, aria-voice) and the /aria-* slash commands.",
+      "version": "0.1.0"
+    }
+  ]
+}

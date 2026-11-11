@@ -1,13 +1,14 @@
 <#
 .SYNOPSIS
-  Install aria: the render engine, the aria skills for Claude Code, the `aria` command and (with -Voice) the voice
-  environment.
+  Install Aria: the render engine, the Aria skills and slash commands for Claude Code, the `aria` command and (with
+  -Voice) the voice environment.
 
 .EXAMPLE
-  ./install.ps1            # engine + skills + aria command
-  ./install.ps1 -Voice     # also the voice environment (~5 GB: CUDA torch, Chatterbox Turbo, faster-whisper, Kokoro)
+  ./install.ps1                     # engine + skills + slash commands + aria command
+  ./install.ps1 -Voice              # also the voice environment (~5 GB: CUDA torch, Chatterbox Turbo, faster-whisper, Kokoro)
+  ./install.ps1 -EngineOnly -Voice  # engine + voice + aria command only: use this when Aria is installed as a plugin
 #>
-param([switch]$Voice, [switch]$SkipEngine)
+param([switch]$Voice, [switch]$SkipEngine, [switch]$EngineOnly)
 $ErrorActionPreference = "Stop"
 $Root = $PSScriptRoot
 
@@ -23,22 +24,26 @@ if (-not $SkipEngine) {
   Write-Host "aria: engine ok"
 }
 
-# 2. skills for Claude Code
-$skills = Join-Path $HOME ".claude\skills"
-New-Item -ItemType Directory -Force $skills | Out-Null
-foreach ($s in "aria", "aria-video", "aria-voice") {
-  $dst = Join-Path $skills $s
-  if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
-  Copy-Item -Recurse (Join-Path $Root "skills\$s") $dst
-}
-Write-Host "aria: skills installed to $skills (aria, aria-video, aria-voice)"
+# 2. skills for Claude Code (skipped with -EngineOnly: the plugin already provides them)
+if ($EngineOnly) {
+  Write-Host "aria: -EngineOnly: skills and slash commands not copied (the plugin or your agent provides them)"
+} else {
+  $skills = Join-Path $HOME ".claude\skills"
+  New-Item -ItemType Directory -Force $skills | Out-Null
+  foreach ($s in "aria", "aria-video", "aria-voice") {
+    $dst = Join-Path $skills $s
+    if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
+    Copy-Item -Recurse (Join-Path $Root "skills\$s") $dst
+  }
+  Write-Host "aria: skills installed to $skills (aria, aria-video, aria-voice)"
 
-# 2b. slash commands: only aria-*.md files are written; nothing else in the folder is touched
-$commands = Join-Path $HOME ".claude\commands"
-New-Item -ItemType Directory -Force $commands | Out-Null
-foreach ($c in Get-ChildItem (Join-Path $Root "commands") -Filter "aria-*.md") {
-  Copy-Item -Force $c.FullName (Join-Path $commands $c.Name)
-  Write-Host "aria: installed /$($c.BaseName)"
+  # 2b. slash commands: only aria-*.md files are written; nothing else in the folder is touched
+  $commands = Join-Path $HOME ".claude\commands"
+  New-Item -ItemType Directory -Force $commands | Out-Null
+  foreach ($c in Get-ChildItem (Join-Path $Root "commands") -Filter "aria-*.md") {
+    Copy-Item -Force $c.FullName (Join-Path $commands $c.Name)
+    Write-Host "aria: installed /$($c.BaseName)"
+  }
 }
 
 # 3. the aria command on PATH

@@ -21,6 +21,9 @@ git clone https://github.com/Abhinav-murugan1/Aria; cd Aria
 aria doctor              # engine, ffmpeg, GPU, voice: all should say ok
 ```
 
+If `aria` is not on PATH (e.g. Aria was installed as a plugin), run `python "${CLAUDE_PLUGIN_ROOT}/tools/aria.py" ...`
+with the same verbs; with the plugin, `./install.ps1 -EngineOnly` installs the engine and `aria` without copying skills.
+
 Needs Windows 10/11 (or Linux/macOS), a GPU with Vulkan/DX12, ffmpeg on PATH. Voice wants an NVIDIA GPU (~6 GB VRAM);
 it runs on CPU, slowly.
 
