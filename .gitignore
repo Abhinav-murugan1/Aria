@@ -1,0 +1,10 @@
+tools/voice/.venv/
+tools/voice/.venv-kokoro/
+tools/voice/models/
+__pycache__/
+*.pyc
+**/out/
+**/stills/
+**/frames/
+*.log
+graphify-out/

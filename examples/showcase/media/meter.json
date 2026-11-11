@@ -1,0 +1,30 @@
+{
+ "line05": {
+  "median_hz": 196.1,
+  "spread": 2.59,
+  "range": 7.3,
+  "loudness_range": 18.0,
+  "seconds": 1.54
+ },
+ "line06": {
+  "median_hz": 282.1,
+  "spread": 2.59,
+  "range": 7.69,
+  "loudness_range": 20.1,
+  "seconds": 1.3
+ },
+ "line07": {
+  "median_hz": 231.8,
+  "spread": 3.45,
+  "range": 12.5,
+  "loudness_range": 14.9,
+  "seconds": 2.13
+ },
+ "line08": {
+  "median_hz": 212.0,
+  "spread": 2.29,
+  "range": 7.15,
+  "loudness_range": 36.7,
+  "seconds": 1.49
+ }
+}

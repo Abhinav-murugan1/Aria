@@ -1,0 +1,20 @@
+{
+  "voice": "aria-heart",
+  "lead": 0.6,
+  "lines": [
+    {"say": "[dramatic] What if one skill could make the whole video?", "caption": "What if one skill could make the whole video?", "pause": 0.7, "seed": 1},
+    {"say": "[happy] Meet aria!", "caption": "Meet aria!", "pause": 0.35, "seed": 2},
+    {"say": "It writes the script, gives it a voice, scores the music, and renders every frame on your GPU.", "pause": 0.8, "seed": 3},
+    {"say": "And the voice? It actually feels things.", "pause": 0.6, "seed": 4},
+    {"say": "[whispering] It can whisper you a secret...", "caption": "It can whisper you a secret...", "pause": 0.5, "seed": 5},
+    {"say": "[happy] Burst with excitement!", "caption": "Burst with excitement!", "pause": 0.45, "seed": 6},
+    {"say": "[dramatic] Or tell a story like it truly means it.", "caption": "Or tell a story like it truly means it.", "pause": 0.5, "seed": 7},
+    {"say": "[chuckle] It even laughs.", "caption": "It even laughs.", "pause": 0.8, "seed": 8},
+    {"say": "Every line is heard back by speech recognition. If a single word slips, aria says it again.", "pause": 0.6, "seed": 9},
+    {"say": "Then each caption lands on the exact word you hear.", "pause": 0.8, "seed": 10},
+    {"say": "Scenes are just React and TypeScript. Three D, motion graphics, music, all in code.", "caption": "Scenes are just React and TypeScript. 3D, motion graphics, music, all in code.", "pause": 0.7, "seed": 31},
+    {"say": "One command takes it from script, to voice, to render, to a checked, share ready file.", "pause": 0.9, "seed": 12},
+    {"say": "[happy] Everything you just saw and heard was made with the aria skill.", "caption": "Everything you just saw and heard was made with the aria skill.", "pause": 0.5, "seed": 13},
+    {"say": "Grab it on GitHub, and make something wild.", "pause": 1.6, "seed": 14}
+  ]
+}

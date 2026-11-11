@@ -1,0 +1,4 @@
+* text=auto
+bin/aria text eol=lf
+*.wav binary
+*.png binary

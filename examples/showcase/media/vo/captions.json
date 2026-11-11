@@ -1,0 +1,811 @@
+{
+ "seconds": 52.531,
+ "rate": 24000,
+ "lines": [
+  {
+   "file": "line01.wav",
+   "start": 0.6,
+   "end": 2.841,
+   "text": "What if one skill could make the whole video?",
+   "ok": true,
+   "heard": "What if one skill could make the whole video?",
+   "words": [
+    {
+     "w": "What",
+     "s": 0.6,
+     "e": 0.76
+    },
+    {
+     "w": "if",
+     "s": 0.76,
+     "e": 0.88
+    },
+    {
+     "w": "one",
+     "s": 0.88,
+     "e": 1.1
+    },
+    {
+     "w": "skill",
+     "s": 1.1,
+     "e": 1.46
+    },
+    {
+     "w": "could",
+     "s": 1.46,
+     "e": 1.72
+    },
+    {
+     "w": "make",
+     "s": 1.72,
+     "e": 1.88
+    },
+    {
+     "w": "the",
+     "s": 1.88,
+     "e": 2.06
+    },
+    {
+     "w": "whole",
+     "s": 2.06,
+     "e": 2.26
+    },
+    {
+     "w": "video?",
+     "s": 2.26,
+     "e": 2.58
+    }
+   ]
+  },
+  {
+   "file": "line02.wav",
+   "start": 3.541,
+   "end": 4.342,
+   "text": "Meet aria!",
+   "ok": true,
+   "heard": "Meet Aria!",
+   "words": [
+    {
+     "w": "Meet",
+     "s": 3.541,
+     "e": 3.721
+    },
+    {
+     "w": "aria!",
+     "s": 3.721,
+     "e": 4.261
+    }
+   ]
+  },
+  {
+   "file": "line03.wav",
+   "start": 4.692,
+   "end": 10.356,
+   "text": "It writes the script, gives it a voice, scores the music, and renders every frame on your GPU.",
+   "ok": true,
+   "heard": "It writes the script, gives it a voice, scores the music, and renders every frame on your  GPU.",
+   "words": [
+    {
+     "w": "It",
+     "s": 4.692,
+     "e": 4.852
+    },
+    {
+     "w": "writes",
+     "s": 4.852,
+     "e": 5.052
+    },
+    {
+     "w": "the",
+     "s": 5.052,
+     "e": 5.272
+    },
+    {
+     "w": "script,",
+     "s": 5.272,
+     "e": 5.612
+    },
+    {
+     "w": "gives",
+     "s": 5.972,
+     "e": 6.192
+    },
+    {
+     "w": "it",
+     "s": 6.192,
+     "e": 6.352
+    },
+    {
+     "w": "a",
+     "s": 6.352,
+     "e": 6.452
+    },
+    {
+     "w": "voice,",
+     "s": 6.452,
+     "e": 6.792
+    },
+    {
+     "w": "scores",
+     "s": 7.052,
+     "e": 7.372
+    },
+    {
+     "w": "the",
+     "s": 7.372,
+     "e": 7.592
+    },
+    {
+     "w": "music,",
+     "s": 7.592,
+     "e": 7.912
+    },
+    {
+     "w": "and",
+     "s": 8.352,
+     "e": 8.412
+    },
+    {
+     "w": "renders",
+     "s": 8.412,
+     "e": 8.712
+    },
+    {
+     "w": "every",
+     "s": 8.712,
+     "e": 9.092
+    },
+    {
+     "w": "frame",
+     "s": 9.092,
+     "e": 9.412
+    },
+    {
+     "w": "on",
+     "s": 9.412,
+     "e": 9.592
+    },
+    {
+     "w": "your",
+     "s": 9.592,
+     "e": 9.732
+    },
+    {
+     "w": "GPU.",
+     "s": 9.732,
+     "e": 10.052
+    }
+   ]
+  },
+  {
+   "file": "line04.wav",
+   "start": 11.156,
+   "end": 13.405,
+   "text": "And the voice? It actually feels things.",
+   "ok": true,
+   "heard": "and the voice, it actually feels things.",
+   "words": [
+    {
+     "w": "And",
+     "s": 11.156,
+     "e": 11.296
+    },
+    {
+     "w": "the",
+     "s": 11.296,
+     "e": 11.376
+    },
+    {
+     "w": "voice?",
+     "s": 11.376,
+     "e": 11.776
+    },
+    {
+     "w": "It",
+     "s": 12.116,
+     "e": 12.296
+    },
+    {
+     "w": "actually",
+     "s": 12.296,
+     "e": 12.576
+    },
+    {
+     "w": "feels",
+     "s": 12.576,
+     "e": 12.856
+    },
+    {
+     "w": "things.",
+     "s": 12.856,
+     "e": 13.176
+    }
+   ]
+  },
+  {
+   "file": "line05.wav",
+   "start": 14.005,
+   "end": 15.544,
+   "text": "It can whisper you a secret...",
+   "ok": true,
+   "heard": "it can whisper you a secret.",
+   "words": [
+    {
+     "w": "It",
+     "s": 14.005,
+     "e": 14.145
+    },
+    {
+     "w": "can",
+     "s": 14.145,
+     "e": 14.285
+    },
+    {
+     "w": "whisper",
+     "s": 14.285,
+     "e": 14.605
+    },
+    {
+     "w": "you",
+     "s": 14.605,
+     "e": 14.805
+    },
+    {
+     "w": "a",
+     "s": 14.805,
+     "e": 14.965
+    },
+    {
+     "w": "secret...",
+     "s": 14.965,
+     "e": 15.205
+    }
+   ]
+  },
+  {
+   "file": "line06.wav",
+   "start": 16.044,
+   "end": 17.344,
+   "text": "Burst with excitement!",
+   "ok": true,
+   "heard": "burst with excitement.",
+   "words": [
+    {
+     "w": "Burst",
+     "s": 16.044,
+     "e": 16.284
+    },
+    {
+     "w": "with",
+     "s": 16.284,
+     "e": 16.524
+    },
+    {
+     "w": "excitement!",
+     "s": 16.524,
+     "e": 16.984
+    }
+   ]
+  },
+  {
+   "file": "line07.wav",
+   "start": 17.794,
+   "end": 19.92,
+   "text": "Or tell a story like it truly means it.",
+   "ok": true,
+   "heard": "or tell a story like it truly means it.",
+   "words": [
+    {
+     "w": "Or",
+     "s": 17.794,
+     "e": 17.954
+    },
+    {
+     "w": "tell",
+     "s": 17.954,
+     "e": 18.154
+    },
+    {
+     "w": "a",
+     "s": 18.154,
+     "e": 18.334
+    },
+    {
+     "w": "story",
+     "s": 18.334,
+     "e": 18.574
+    },
+    {
+     "w": "like",
+     "s": 18.574,
+     "e": 18.794
+    },
+    {
+     "w": "it",
+     "s": 18.794,
+     "e": 18.954
+    },
+    {
+     "w": "truly",
+     "s": 18.954,
+     "e": 19.194
+    },
+    {
+     "w": "means",
+     "s": 19.194,
+     "e": 19.534
+    },
+    {
+     "w": "it.",
+     "s": 19.534,
+     "e": 19.814
+    }
+   ]
+  },
+  {
+   "file": "line08.wav",
+   "start": 20.42,
+   "end": 21.911,
+   "text": "It even laughs.",
+   "ok": true,
+   "heard": "It even laughs.",
+   "words": [
+    {
+     "w": "It",
+     "s": 20.42,
+     "e": 21.1
+    },
+    {
+     "w": "even",
+     "s": 21.1,
+     "e": 21.3
+    },
+    {
+     "w": "laughs.",
+     "s": 21.3,
+     "e": 21.6
+    }
+   ]
+  },
+  {
+   "file": "line09.wav",
+   "start": 22.711,
+   "end": 28.166,
+   "text": "Every line is heard back by speech recognition. If a single word slips, aria says it again.",
+   "ok": true,
+   "heard": "Every line is heard back by speech recognition.  If a single word slips, Arya says it again.",
+   "words": [
+    {
+     "w": "Every",
+     "s": 22.711,
+     "e": 22.991
+    },
+    {
+     "w": "line",
+     "s": 22.991,
+     "e": 23.211
+    },
+    {
+     "w": "is",
+     "s": 23.211,
+     "e": 23.371
+    },
+    {
+     "w": "heard",
+     "s": 23.371,
+     "e": 23.551
+    },
+    {
+     "w": "back",
+     "s": 23.551,
+     "e": 23.811
+    },
+    {
+     "w": "by",
+     "s": 23.811,
+     "e": 24.011
+    },
+    {
+     "w": "speech",
+     "s": 24.011,
+     "e": 24.251
+    },
+    {
+     "w": "recognition.",
+     "s": 24.251,
+     "e": 24.811
+    },
+    {
+     "w": "If",
+     "s": 25.291,
+     "e": 25.411
+    },
+    {
+     "w": "a",
+     "s": 25.411,
+     "e": 25.591
+    },
+    {
+     "w": "single",
+     "s": 25.591,
+     "e": 25.851
+    },
+    {
+     "w": "word",
+     "s": 25.851,
+     "e": 26.111
+    },
+    {
+     "w": "slips,",
+     "s": 26.111,
+     "e": 26.551
+    },
+    {
+     "w": "aria",
+     "s": 26.551,
+     "e": 27.351
+    },
+    {
+     "w": "says",
+     "s": 27.351,
+     "e": 27.491
+    },
+    {
+     "w": "it",
+     "s": 27.491,
+     "e": 27.691
+    },
+    {
+     "w": "again.",
+     "s": 27.691,
+     "e": 27.991
+    }
+   ]
+  },
+  {
+   "file": "line10.wav",
+   "start": 28.766,
+   "end": 31.346,
+   "text": "Then each caption lands on the exact word you hear.",
+   "ok": true,
+   "heard": "Then each caption lands on the exact word you hear.",
+   "words": [
+    {
+     "w": "Then",
+     "s": 28.766,
+     "e": 29.006
+    },
+    {
+     "w": "each",
+     "s": 29.006,
+     "e": 29.206
+    },
+    {
+     "w": "caption",
+     "s": 29.206,
+     "e": 29.566
+    },
+    {
+     "w": "lands",
+     "s": 29.566,
+     "e": 29.846
+    },
+    {
+     "w": "on",
+     "s": 29.846,
+     "e": 30.006
+    },
+    {
+     "w": "the",
+     "s": 30.006,
+     "e": 30.126
+    },
+    {
+     "w": "exact",
+     "s": 30.126,
+     "e": 30.366
+    },
+    {
+     "w": "word",
+     "s": 30.366,
+     "e": 30.606
+    },
+    {
+     "w": "you",
+     "s": 30.606,
+     "e": 30.846
+    },
+    {
+     "w": "hear.",
+     "s": 30.846,
+     "e": 31.186
+    }
+   ]
+  },
+  {
+   "file": "line11.wav",
+   "start": 32.146,
+   "end": 37.496,
+   "text": "Scenes are just React and TypeScript. 3D, motion graphics, music, all in code.",
+   "ok": true,
+   "heard": "Scenes are just React and TypeScript, 3D, motion graphics, music, all in code.",
+   "words": [
+    {
+     "w": "Scenes",
+     "s": 32.146,
+     "e": 32.446
+    },
+    {
+     "w": "are",
+     "s": 32.446,
+     "e": 32.646
+    },
+    {
+     "w": "just",
+     "s": 32.646,
+     "e": 32.926
+    },
+    {
+     "w": "React",
+     "s": 32.926,
+     "e": 33.346
+    },
+    {
+     "w": "and",
+     "s": 33.346,
+     "e": 33.546
+    },
+    {
+     "w": "TypeScript.",
+     "s": 33.546,
+     "e": 34.026
+    },
+    {
+     "w": "3D,",
+     "s": 34.346,
+     "e": 34.766
+    },
+    {
+     "w": "motion",
+     "s": 35.106,
+     "e": 35.266
+    },
+    {
+     "w": "graphics,",
+     "s": 35.266,
+     "e": 35.726
+    },
+    {
+     "w": "music,",
+     "s": 36.086,
+     "e": 36.326
+    },
+    {
+     "w": "all",
+     "s": 36.706,
+     "e": 36.886
+    },
+    {
+     "w": "in",
+     "s": 36.886,
+     "e": 37.066
+    },
+    {
+     "w": "code.",
+     "s": 37.066,
+     "e": 37.326
+    }
+   ]
+  },
+  {
+   "file": "line12.wav",
+   "start": 38.196,
+   "end": 43.779,
+   "text": "One command takes it from script, to voice, to render, to a checked, share ready file.",
+   "ok": true,
+   "heard": "One command takes it from script to voice to render to a checked share ready file.",
+   "words": [
+    {
+     "w": "One",
+     "s": 38.196,
+     "e": 38.516
+    },
+    {
+     "w": "command",
+     "s": 38.516,
+     "e": 38.936
+    },
+    {
+     "w": "takes",
+     "s": 38.936,
+     "e": 39.336
+    },
+    {
+     "w": "it",
+     "s": 39.336,
+     "e": 39.516
+    },
+    {
+     "w": "from",
+     "s": 39.516,
+     "e": 39.696
+    },
+    {
+     "w": "script,",
+     "s": 39.696,
+     "e": 40.076
+    },
+    {
+     "w": "to",
+     "s": 40.076,
+     "e": 40.536
+    },
+    {
+     "w": "voice,",
+     "s": 40.536,
+     "e": 40.836
+    },
+    {
+     "w": "to",
+     "s": 40.836,
+     "e": 41.316
+    },
+    {
+     "w": "render,",
+     "s": 41.316,
+     "e": 41.636
+    },
+    {
+     "w": "to",
+     "s": 41.636,
+     "e": 42.076
+    },
+    {
+     "w": "a",
+     "s": 42.076,
+     "e": 42.196
+    },
+    {
+     "w": "checked,",
+     "s": 42.196,
+     "e": 42.576
+    },
+    {
+     "w": "share",
+     "s": 42.576,
+     "e": 43.016
+    },
+    {
+     "w": "ready",
+     "s": 43.016,
+     "e": 43.256
+    },
+    {
+     "w": "file.",
+     "s": 43.256,
+     "e": 43.596
+    }
+   ]
+  },
+  {
+   "file": "line13.wav",
+   "start": 44.679,
+   "end": 47.862,
+   "text": "Everything you just saw and heard was made with the aria skill.",
+   "ok": false,
+   "heard": "Everything you just saw and heard was made with the Arya skill.",
+   "words": [
+    {
+     "w": "Everything",
+     "s": 44.679,
+     "e": 45.199
+    },
+    {
+     "w": "you",
+     "s": 45.199,
+     "e": 45.419
+    },
+    {
+     "w": "just",
+     "s": 45.419,
+     "e": 45.639
+    },
+    {
+     "w": "saw",
+     "s": 45.639,
+     "e": 45.959
+    },
+    {
+     "w": "and",
+     "s": 45.959,
+     "e": 46.079
+    },
+    {
+     "w": "heard",
+     "s": 46.079,
+     "e": 46.339
+    },
+    {
+     "w": "was",
+     "s": 46.339,
+     "e": 46.579
+    },
+    {
+     "w": "made",
+     "s": 46.579,
+     "e": 46.779
+    },
+    {
+     "w": "with",
+     "s": 46.779,
+     "e": 46.959
+    },
+    {
+     "w": "the",
+     "s": 46.959,
+     "e": 47.079
+    },
+    {
+     "w": "aria",
+     "s": 47.079,
+     "e": 47.459
+    },
+    {
+     "w": "skill.",
+     "s": 47.459,
+     "e": 47.679
+    }
+   ]
+  },
+  {
+   "file": "line14.wav",
+   "start": 48.362,
+   "end": 50.931,
+   "text": "Grab it on GitHub, and make something wild.",
+   "ok": true,
+   "heard": "Grab it on GitHub and make something wild.",
+   "words": [
+    {
+     "w": "Grab",
+     "s": 48.362,
+     "e": 48.602
+    },
+    {
+     "w": "it",
+     "s": 48.602,
+     "e": 48.782
+    },
+    {
+     "w": "on",
+     "s": 48.782,
+     "e": 49.002
+    },
+    {
+     "w": "GitHub,",
+     "s": 49.002,
+     "e": 49.342
+    },
+    {
+     "w": "and",
+     "s": 49.342,
+     "e": 49.802
+    },
+    {
+     "w": "make",
+     "s": 49.802,
+     "e": 49.982
+    },
+    {
+     "w": "something",
+     "s": 49.982,
+     "e": 50.262
+    },
+    {
+     "w": "wild.",
+     "s": 50.262,
+     "e": 50.662
+    }
+   ]
+  }
+ ]
+}

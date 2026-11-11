@@ -1,0 +1,9 @@
+{
+  "voice": "aria-heart",
+  "lead": 0.3,
+  "lines": [
+    {"say": "[happy] Your brain does something weird every single day.", "caption": "Your brain does something weird every single day.", "pause": 0.4},
+    {"say": "[whispering] And you never notice it.", "caption": "And you never notice it.", "pause": 0.6},
+    {"say": "Follow for more.", "pause": 1.0}
+  ]
+}
