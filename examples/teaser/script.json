@@ -1,0 +1,24 @@
+{
+  "voice": "aria-heart",
+  "lead": 3.4,
+  "lines": [
+    {"say": "[whispering] What if a video could build itself?", "pause": 1.2, "seed": 1},
+    {"say": "[dramatic] This is aria.", "caption": "This is Aria.", "pause": 2.0, "seed": 2},
+    {"say": "[happy] I'm a cloned voice, and I can actually feel things.", "pause": 0.6, "seed": 3},
+    {"say": "[whispering] I can whisper.", "pause": 0.6, "seed": 4},
+    {"say": "[surprised] I can be surprised!", "pause": 0.6, "seed": 5},
+    {"say": "[sarcastic] And yes, I do sarcasm, obviously.", "pause": 0.6, "seed": 6},
+    {"say": "[chuckle] I even laugh at my own jokes.", "pause": 1.2, "seed": 7},
+    {"say": "[happy] Every take is heard back, and spoken again until it's right.", "pause": 2.0, "seed": 9},
+    {"say": "[happy] Every word lands on its exact frame.", "pause": 1.2, "seed": 10},
+    {"say": "[dramatic] The scenes are code, rendered in real three D.", "caption": "The scenes are code, rendered in real 3D.", "pause": 1.6, "seed": 11},
+    {"say": "[surprised] Glass, fire, fog and sunlight, all written in TypeScript.", "pause": 2.8, "seed": 12},
+    {"say": "[happy] Even the music is written in code.", "pause": 2.4, "seed": 13},
+    {"say": "[whispering] Then aria inspects every frame before you ever see it.", "caption": "Then Aria inspects every frame before you ever see it.", "pause": 1.6, "seed": 14},
+    {"say": "[happy] How does it work? You just ask in plain words.", "pause": 0.4, "seed": 18},
+    {"say": "[dramatic] Aria writes the script, voices it, times every word, and codes each scene frame by frame.", "pause": 0.3, "seed": 19},
+    {"say": "[happy] Then it renders and checks itself, right on your own computer.", "pause": 0.8, "seed": 20},
+    {"say": "[happy] Everything you just watched was made with the aria skill.", "caption": "Everything you just watched was made with the Aria skill.", "pause": 0.6, "seed": 16},
+    {"say": "[happy] Find it on GitHub.", "pause": 4.0, "seed": 17}
+  ]
+}

@@ -1,0 +1,128 @@
+{
+ "line01": {
+  "median_hz": 222.6,
+  "spread": 3.7,
+  "range": 12.98,
+  "loudness_range": 21.4,
+  "seconds": 1.97
+ },
+ "line02": {
+  "median_hz": 208.9,
+  "spread": 2.79,
+  "range": 8.02,
+  "loudness_range": 14.9,
+  "seconds": 0.99
+ },
+ "line03": {
+  "median_hz": 225.2,
+  "spread": 3.93,
+  "range": 11.2,
+  "loudness_range": 21.4,
+  "seconds": 3.12
+ },
+ "line04": {
+  "median_hz": 216.9,
+  "spread": 3.5,
+  "range": 10.18,
+  "loudness_range": 13.3,
+  "seconds": 0.92
+ },
+ "line05": {
+  "median_hz": 347.3,
+  "spread": 4.23,
+  "range": 13.03,
+  "loudness_range": 22.1,
+  "seconds": 1.31
+ },
+ "line06": {
+  "median_hz": 179.8,
+  "spread": 1.77,
+  "range": 4.88,
+  "loudness_range": 18.9,
+  "seconds": 2.72
+ },
+ "line07": {
+  "median_hz": 199.5,
+  "spread": 4.3,
+  "range": 12.26,
+  "loudness_range": 24.5,
+  "seconds": 2.14
+ },
+ "line08": {
+  "median_hz": 217.6,
+  "spread": 3.76,
+  "range": 12.47,
+  "loudness_range": 18.2,
+  "seconds": 3.49
+ },
+ "line09": {
+  "median_hz": 226.5,
+  "spread": 2.2,
+  "range": 7.59,
+  "loudness_range": 15.0,
+  "seconds": 2.18
+ },
+ "line10": {
+  "median_hz": 211.4,
+  "spread": 2.68,
+  "range": 8.94,
+  "loudness_range": 21.6,
+  "seconds": 3.22
+ },
+ "line11": {
+  "median_hz": 217.6,
+  "spread": 2.37,
+  "range": 7.29,
+  "loudness_range": 21.1,
+  "seconds": 3.9
+ },
+ "line12": {
+  "median_hz": 218.8,
+  "spread": 3.59,
+  "range": 11.66,
+  "loudness_range": 11.9,
+  "seconds": 2.1
+ },
+ "line13": {
+  "median_hz": 213.2,
+  "spread": 2.66,
+  "range": 8.69,
+  "loudness_range": 18.4,
+  "seconds": 3.16
+ },
+ "line14": {
+  "median_hz": 280.5,
+  "spread": 5.47,
+  "range": 18.96,
+  "loudness_range": 21.2,
+  "seconds": 2.36
+ },
+ "line15": {
+  "median_hz": 230.5,
+  "spread": 5.75,
+  "range": 20.99,
+  "loudness_range": 21.8,
+  "seconds": 7.51
+ },
+ "line16": {
+  "median_hz": 213.8,
+  "spread": 2.71,
+  "range": 10.35,
+  "loudness_range": 15.0,
+  "seconds": 2.74
+ },
+ "line17": {
+  "median_hz": 197.8,
+  "spread": 2.0,
+  "range": 6.43,
+  "loudness_range": 13.2,
+  "seconds": 2.52
+ },
+ "line18": {
+  "median_hz": 265.5,
+  "spread": 1.6,
+  "range": 4.27,
+  "loudness_range": 17.0,
+  "seconds": 1.01
+ }
+}

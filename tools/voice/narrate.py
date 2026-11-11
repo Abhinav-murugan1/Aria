@@ -8,7 +8,8 @@ SCRIPT.json:
       "lead": 0.25,                                 # optional: silence before the first line, seconds
       "lines": [
         {"say": "[happy] This is aria!", "caption": "This is aria!", "pause": 0.35},
-        {"say": "[whispering] And it whispers too.", "pause": 0.5, "gain": -1, "seed": 4}
+        {"say": "[whispering] And it whispers too.", "pause": 0.5, "gain": -1, "seed": 4},
+        {"say": "[dramatic] A second voice.", "voice": "aria-adam"}   # optional per-line voice (preset or WAV)
       ]
     }
 
@@ -22,7 +23,9 @@ garbles a word, or stalls, is spoken again with a new seed, up to --tries times.
 Writes OUT_DIR/line01.wav ..., OUT_DIR/narration.wav (all lines with their pauses, 24 kHz mono) and
 OUT_DIR/captions.json:
     {"seconds": 31.4, "lines": [{"file": "line01.wav", "start": 0.25, "end": 2.1, "text": "...", "ok": true,
+                                 "tries": [{"heard": "...", "ok": true}],
                                  "words": [{"w": "This", "s": 0.25, "e": 0.41}, ...]}]}
+"tries" is the hearing-check log: every take spoken for that line, in order, with what recognition heard.
 All times are seconds on the narration track, so a composition can cue on them directly.
 """
 import argparse
@@ -130,13 +133,16 @@ def main():
 
     script = json.load(open(args.script, encoding="utf-8"))
     base = os.path.dirname(os.path.abspath(args.script))
-    voice = args.voice or script.get("voice")
-    if voice:
-        preset = os.path.join(os.path.dirname(os.path.dirname(HERE)), "voices", voice + ".wav")
+
+    def resolve(v):
+        if not v:
+            return None
+        preset = os.path.join(os.path.dirname(os.path.dirname(HERE)), "voices", v + ".wav")
         if os.path.exists(preset):  # a preset name: "aria-heart", "aria-adam"
-            voice = preset
-        elif not os.path.isabs(voice):
-            voice = os.path.join(base, voice)
+            return preset
+        return v if os.path.isabs(v) else os.path.join(base, v)
+
+    voice = resolve(args.voice or script.get("voice"))
     os.makedirs(args.out, exist_ok=True)
     only = {int(x) for x in args.only.split(",")} if args.only else None
 
@@ -151,8 +157,16 @@ def main():
     tts = ChatterboxTurboTTS.from_pretrained(device=device)
     asr_dev = "cpu" if args.asr_cpu else device
     asr = WhisperModel("small.en", device=asr_dev, compute_type="float16" if asr_dev == "cuda" else "int8")
-    if voice:
-        tts.prepare_conditionals(voice)
+    conds = {}  # voice path -> prepared conditionals, so per-line voices switch without re-encoding
+
+    def use_voice(v):
+        if v and v not in conds:
+            tts.prepare_conditionals(v)
+            conds[v] = tts.conds
+        if v:
+            tts.conds = conds[v]
+
+    use_voice(voice)
     rate = tts.sr
 
     old = {}
@@ -171,11 +185,14 @@ def main():
             a, _ = sf.read(path, dtype="float32")
             prev = old[name]
             rel = [[w["s"] - prev["start"], w["e"] - prev["start"]] for w in prev["words"]]
-            takes.append((line, name, a, caption, cap_words, rel, prev.get("ok", True), prev.get("heard", "")))
+            takes.append((line, name, a, caption, cap_words, rel, prev.get("ok", True), prev.get("heard", ""),
+                          prev.get("tries", [])))
             continue
+        use_voice(resolve(line.get("voice")) or voice)
         plain = TAG.sub(" ", spoken).strip()
         tags = len(re.findall(r"\[[a-z ]+\]", spoken))
         best = None
+        tries = []
         for s in range(args.tries):
             torch.manual_seed(int(line.get("seed", n)) * 100 + s)
             wav = tts.generate(spoken, temperature=0.8 if s < 4 else 0.7)
@@ -189,6 +206,7 @@ def main():
             ok, score = heard_score(plain, heard)
             ok = ok and not_stalled
             score = score if not_stalled else score - 100
+            tries.append({"heard": heard, "ok": bool(ok)})
             if ok or best is None or score > best[4]:  # no take passes: keep the closest one
                 best = (a, heard, words, ok, score)
             if ok:
@@ -199,15 +217,15 @@ def main():
         sf.write(path, a, rate)
         rel = align(cap_words, words, len(a) / rate)
         print(f"line {n:2d} {'ok ' if ok else 'BAD'} {len(a) / rate:5.2f}s  {heard}", flush=True)
-        takes.append((line, name, a, caption, cap_words, rel, ok, heard))
+        takes.append((line, name, a, caption, cap_words, rel, ok, heard, tries))
 
     t = float(script.get("lead", 0.25))
     track = [np.zeros(int(t * rate), dtype=np.float32)]
     out_lines = []
-    for line, name, a, caption, cap_words, rel, ok, heard in takes:
+    for line, name, a, caption, cap_words, rel, ok, heard, tries in takes:
         dur = len(a) / rate
         out_lines.append({
-            "file": name, "start": round(t, 3), "end": round(t + dur, 3), "text": caption, "ok": ok, "heard": heard,
+            "file": name, "start": round(t, 3), "end": round(t + dur, 3), "text": caption, "ok": ok, "heard": heard, "tries": tries,
             "words": [{"w": w, "s": round(t + s, 3), "e": round(t + e, 3)} for w, (s, e) in zip(cap_words, rel)],
         })
         pause = float(line.get("pause", 0.3))

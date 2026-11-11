@@ -1,0 +1,1009 @@
+{
+ "seconds": 75.248,
+ "rate": 24000,
+ "lines": [
+  {
+   "file": "line01.wav",
+   "start": 3.4,
+   "end": 5.366,
+   "text": "What if a video could build itself?",
+   "ok": true,
+   "heard": "What if a video could build itself?",
+   "tries": [
+    {
+     "heard": "What if a video could build itself?",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "What",
+     "s": 3.4,
+     "e": 3.58
+    },
+    {
+     "w": "if",
+     "s": 3.58,
+     "e": 3.72
+    },
+    {
+     "w": "a",
+     "s": 3.72,
+     "e": 3.86
+    },
+    {
+     "w": "video",
+     "s": 3.86,
+     "e": 4.2
+    },
+    {
+     "w": "could",
+     "s": 4.2,
+     "e": 4.44
+    },
+    {
+     "w": "build",
+     "s": 4.44,
+     "e": 4.68
+    },
+    {
+     "w": "itself?",
+     "s": 4.68,
+     "e": 5.06
+    }
+   ]
+  },
+  {
+   "file": "line02.wav",
+   "start": 6.566,
+   "end": 7.553,
+   "text": "This is Aria.",
+   "ok": true,
+   "heard": "This is Aria.",
+   "tries": [
+    {
+     "heard": "This is Aria.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "This",
+     "s": 6.566,
+     "e": 6.766
+    },
+    {
+     "w": "is",
+     "s": 6.766,
+     "e": 6.926
+    },
+    {
+     "w": "Aria.",
+     "s": 6.926,
+     "e": 7.466
+    }
+   ]
+  },
+  {
+   "file": "line03.wav",
+   "start": 9.553,
+   "end": 12.67,
+   "text": "I'm a cloned voice, and I can actually feel things.",
+   "ok": true,
+   "heard": "I'm a cloned voice and I can actually feel things.",
+   "tries": [
+    {
+     "heard": "I'm a cloned voice and I can actually feel things.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "I'm",
+     "s": 9.553,
+     "e": 9.753
+    },
+    {
+     "w": "a",
+     "s": 9.753,
+     "e": 9.853
+    },
+    {
+     "w": "cloned",
+     "s": 9.853,
+     "e": 10.093
+    },
+    {
+     "w": "voice,",
+     "s": 10.093,
+     "e": 10.493
+    },
+    {
+     "w": "and",
+     "s": 10.493,
+     "e": 10.893
+    },
+    {
+     "w": "I",
+     "s": 10.893,
+     "e": 10.993
+    },
+    {
+     "w": "can",
+     "s": 10.993,
+     "e": 11.113
+    },
+    {
+     "w": "actually",
+     "s": 11.113,
+     "e": 11.633
+    },
+    {
+     "w": "feel",
+     "s": 11.633,
+     "e": 11.993
+    },
+    {
+     "w": "things.",
+     "s": 11.993,
+     "e": 12.413
+    }
+   ]
+  },
+  {
+   "file": "line04.wav",
+   "start": 13.27,
+   "end": 14.19,
+   "text": "I can whisper.",
+   "ok": true,
+   "heard": "I can whisper.",
+   "tries": [
+    {
+     "heard": "I can whisper.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "I",
+     "s": 13.27,
+     "e": 13.45
+    },
+    {
+     "w": "can",
+     "s": 13.45,
+     "e": 13.61
+    },
+    {
+     "w": "whisper.",
+     "s": 13.61,
+     "e": 13.95
+    }
+   ]
+  },
+  {
+   "file": "line05.wav",
+   "start": 14.79,
+   "end": 16.096,
+   "text": "I can be surprised!",
+   "ok": true,
+   "heard": "I can be surprised.",
+   "tries": [
+    {
+     "heard": "I can be surprised.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "I",
+     "s": 14.79,
+     "e": 14.95
+    },
+    {
+     "w": "can",
+     "s": 14.95,
+     "e": 15.07
+    },
+    {
+     "w": "be",
+     "s": 15.07,
+     "e": 15.23
+    },
+    {
+     "w": "surprised!",
+     "s": 15.23,
+     "e": 15.75
+    }
+   ]
+  },
+  {
+   "file": "line06.wav",
+   "start": 16.696,
+   "end": 19.412,
+   "text": "And yes, I do sarcasm, obviously.",
+   "ok": true,
+   "heard": "And yes, I do sarcasm, obviously.",
+   "tries": [
+    {
+     "heard": "And yes, I do sarcasm, obviously.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "And",
+     "s": 16.696,
+     "e": 16.856
+    },
+    {
+     "w": "yes,",
+     "s": 16.856,
+     "e": 17.076
+    },
+    {
+     "w": "I",
+     "s": 17.396,
+     "e": 17.446
+    },
+    {
+     "w": "do",
+     "s": 17.446,
+     "e": 17.736
+    },
+    {
+     "w": "sarcasm,",
+     "s": 17.736,
+     "e": 18.476
+    },
+    {
+     "w": "obviously.",
+     "s": 18.636,
+     "e": 19.056
+    }
+   ]
+  },
+  {
+   "file": "line07.wav",
+   "start": 20.012,
+   "end": 22.152,
+   "text": "I even laugh at my own jokes.",
+   "ok": true,
+   "heard": "I even laugh at my own jokes.",
+   "tries": [
+    {
+     "heard": "I even laugh at my own jokes.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "I",
+     "s": 20.012,
+     "e": 20.652
+    },
+    {
+     "w": "even",
+     "s": 20.652,
+     "e": 20.852
+    },
+    {
+     "w": "laugh",
+     "s": 20.852,
+     "e": 21.172
+    },
+    {
+     "w": "at",
+     "s": 21.172,
+     "e": 21.352
+    },
+    {
+     "w": "my",
+     "s": 21.352,
+     "e": 21.472
+    },
+    {
+     "w": "own",
+     "s": 21.472,
+     "e": 21.632
+    },
+    {
+     "w": "jokes.",
+     "s": 21.632,
+     "e": 21.932
+    }
+   ]
+  },
+  {
+   "file": "line08.wav",
+   "start": 23.352,
+   "end": 26.846,
+   "text": "Every take is heard back, and spoken again until it's right.",
+   "ok": true,
+   "heard": "Every take is heard back and spoken again until it's right.",
+   "tries": [
+    {
+     "heard": "Every take is heard back and spoken again until it's right.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Every",
+     "s": 23.352,
+     "e": 23.772
+    },
+    {
+     "w": "take",
+     "s": 23.772,
+     "e": 24.072
+    },
+    {
+     "w": "is",
+     "s": 24.072,
+     "e": 24.332
+    },
+    {
+     "w": "heard",
+     "s": 24.332,
+     "e": 24.552
+    },
+    {
+     "w": "back,",
+     "s": 24.552,
+     "e": 24.932
+    },
+    {
+     "w": "and",
+     "s": 24.932,
+     "e": 25.172
+    },
+    {
+     "w": "spoken",
+     "s": 25.172,
+     "e": 25.512
+    },
+    {
+     "w": "again",
+     "s": 25.512,
+     "e": 25.972
+    },
+    {
+     "w": "until",
+     "s": 25.972,
+     "e": 26.292
+    },
+    {
+     "w": "it's",
+     "s": 26.292,
+     "e": 26.532
+    },
+    {
+     "w": "right.",
+     "s": 26.532,
+     "e": 26.812
+    }
+   ]
+  },
+  {
+   "file": "line09.wav",
+   "start": 28.846,
+   "end": 31.023,
+   "text": "Every word lands on its exact frame.",
+   "ok": true,
+   "heard": "Every word lands on its exact frame.",
+   "tries": [
+    {
+     "heard": "Every word lands on its exact frame.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Every",
+     "s": 28.846,
+     "e": 29.126
+    },
+    {
+     "w": "word",
+     "s": 29.126,
+     "e": 29.406
+    },
+    {
+     "w": "lands",
+     "s": 29.406,
+     "e": 29.726
+    },
+    {
+     "w": "on",
+     "s": 29.726,
+     "e": 29.946
+    },
+    {
+     "w": "its",
+     "s": 29.946,
+     "e": 30.046
+    },
+    {
+     "w": "exact",
+     "s": 30.046,
+     "e": 30.386
+    },
+    {
+     "w": "frame.",
+     "s": 30.386,
+     "e": 30.746
+    }
+   ]
+  },
+  {
+   "file": "line10.wav",
+   "start": 32.223,
+   "end": 35.444,
+   "text": "The scenes are code, rendered in real 3D.",
+   "ok": true,
+   "heard": "The scenes are code, rendered in real 3D.",
+   "tries": [
+    {
+     "heard": "The scenes are code, rendered in real 3D.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "The",
+     "s": 32.223,
+     "e": 32.343
+    },
+    {
+     "w": "scenes",
+     "s": 32.343,
+     "e": 32.703
+    },
+    {
+     "w": "are",
+     "s": 32.703,
+     "e": 33.023
+    },
+    {
+     "w": "code,",
+     "s": 33.023,
+     "e": 33.483
+    },
+    {
+     "w": "rendered",
+     "s": 33.843,
+     "e": 34.163
+    },
+    {
+     "w": "in",
+     "s": 34.163,
+     "e": 34.463
+    },
+    {
+     "w": "real",
+     "s": 34.463,
+     "e": 34.723
+    },
+    {
+     "w": "3D.",
+     "s": 34.723,
+     "e": 35.323
+    }
+   ]
+  },
+  {
+   "file": "line11.wav",
+   "start": 37.044,
+   "end": 40.945,
+   "text": "Glass, fire, fog and sunlight, all written in TypeScript.",
+   "ok": true,
+   "heard": "Glass, Fire, Fog, and Sunlight, all written in TypeScript.",
+   "tries": [
+    {
+     "heard": "Glass, Fire, Fog, and Sunlight, all written in TypeScript.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Glass,",
+     "s": 37.044,
+     "e": 37.424
+    },
+    {
+     "w": "fire,",
+     "s": 37.864,
+     "e": 38.244
+    },
+    {
+     "w": "fog",
+     "s": 38.664,
+     "e": 38.714
+    },
+    {
+     "w": "and",
+     "s": 38.904,
+     "e": 38.954
+    },
+    {
+     "w": "sunlight,",
+     "s": 38.954,
+     "e": 39.464
+    },
+    {
+     "w": "all",
+     "s": 39.744,
+     "e": 39.844
+    },
+    {
+     "w": "written",
+     "s": 39.844,
+     "e": 40.064
+    },
+    {
+     "w": "in",
+     "s": 40.064,
+     "e": 40.324
+    },
+    {
+     "w": "TypeScript.",
+     "s": 40.324,
+     "e": 40.764
+    }
+   ]
+  },
+  {
+   "file": "line12.wav",
+   "start": 43.745,
+   "end": 45.847,
+   "text": "Even the music is written in code.",
+   "ok": true,
+   "heard": "Even the music is written in code.",
+   "tries": [
+    {
+     "heard": "Even the music is written in code.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Even",
+     "s": 43.745,
+     "e": 44.025
+    },
+    {
+     "w": "the",
+     "s": 44.025,
+     "e": 44.225
+    },
+    {
+     "w": "music",
+     "s": 44.225,
+     "e": 44.605
+    },
+    {
+     "w": "is",
+     "s": 44.605,
+     "e": 44.845
+    },
+    {
+     "w": "written",
+     "s": 44.845,
+     "e": 45.165
+    },
+    {
+     "w": "in",
+     "s": 45.165,
+     "e": 45.385
+    },
+    {
+     "w": "code.",
+     "s": 45.385,
+     "e": 45.665
+    }
+   ]
+  },
+  {
+   "file": "line13.wav",
+   "start": 48.247,
+   "end": 51.405,
+   "text": "Then Aria inspects every frame before you ever see it.",
+   "ok": true,
+   "heard": "then Aria inspects every frame before you ever see it.",
+   "tries": [
+    {
+     "heard": "then Aria inspects every frame before you ever see it.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Then",
+     "s": 48.247,
+     "e": 48.407
+    },
+    {
+     "w": "Aria",
+     "s": 48.407,
+     "e": 48.907
+    },
+    {
+     "w": "inspects",
+     "s": 48.907,
+     "e": 49.527
+    },
+    {
+     "w": "every",
+     "s": 49.527,
+     "e": 49.767
+    },
+    {
+     "w": "frame",
+     "s": 49.767,
+     "e": 50.127
+    },
+    {
+     "w": "before",
+     "s": 50.127,
+     "e": 50.427
+    },
+    {
+     "w": "you",
+     "s": 50.427,
+     "e": 50.607
+    },
+    {
+     "w": "ever",
+     "s": 50.607,
+     "e": 50.887
+    },
+    {
+     "w": "see",
+     "s": 50.887,
+     "e": 51.127
+    },
+    {
+     "w": "it.",
+     "s": 51.127,
+     "e": 51.307
+    }
+   ]
+  },
+  {
+   "file": "line14.wav",
+   "start": 53.005,
+   "end": 55.367,
+   "text": "How does it work? You just ask in plain words.",
+   "ok": true,
+   "heard": "How does it work? You just ask in plain words.",
+   "tries": [
+    {
+     "heard": "How does it work? You just ask in plain words.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "How",
+     "s": 53.005,
+     "e": 53.125
+    },
+    {
+     "w": "does",
+     "s": 53.125,
+     "e": 53.225
+    },
+    {
+     "w": "it",
+     "s": 53.225,
+     "e": 53.305
+    },
+    {
+     "w": "work?",
+     "s": 53.305,
+     "e": 53.565
+    },
+    {
+     "w": "You",
+     "s": 53.945,
+     "e": 54.045
+    },
+    {
+     "w": "just",
+     "s": 54.045,
+     "e": 54.205
+    },
+    {
+     "w": "ask",
+     "s": 54.205,
+     "e": 54.425
+    },
+    {
+     "w": "in",
+     "s": 54.425,
+     "e": 54.605
+    },
+    {
+     "w": "plain",
+     "s": 54.605,
+     "e": 54.765
+    },
+    {
+     "w": "words.",
+     "s": 54.765,
+     "e": 55.085
+    }
+   ]
+  },
+  {
+   "file": "line15.wav",
+   "start": 55.767,
+   "end": 63.273,
+   "text": "Aria writes the script, voices it, times every word, and codes each scene frame by frame.",
+   "ok": true,
+   "heard": "Arya writes the script, voices it, times every word, and codes each scene frame by frame.",
+   "tries": [
+    {
+     "heard": "Arya writes the script, voices it, times every word, and codes each scene frame by frame.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Aria",
+     "s": 55.767,
+     "e": 56.227
+    },
+    {
+     "w": "writes",
+     "s": 56.227,
+     "e": 56.447
+    },
+    {
+     "w": "the",
+     "s": 56.447,
+     "e": 56.687
+    },
+    {
+     "w": "script,",
+     "s": 56.687,
+     "e": 57.027
+    },
+    {
+     "w": "voices",
+     "s": 57.787,
+     "e": 58.047
+    },
+    {
+     "w": "it,",
+     "s": 58.047,
+     "e": 58.427
+    },
+    {
+     "w": "times",
+     "s": 58.787,
+     "e": 59.207
+    },
+    {
+     "w": "every",
+     "s": 59.207,
+     "e": 59.727
+    },
+    {
+     "w": "word,",
+     "s": 59.727,
+     "e": 60.167
+    },
+    {
+     "w": "and",
+     "s": 60.627,
+     "e": 60.687
+    },
+    {
+     "w": "codes",
+     "s": 60.687,
+     "e": 61.167
+    },
+    {
+     "w": "each",
+     "s": 61.167,
+     "e": 61.467
+    },
+    {
+     "w": "scene",
+     "s": 61.467,
+     "e": 61.887
+    },
+    {
+     "w": "frame",
+     "s": 61.887,
+     "e": 62.287
+    },
+    {
+     "w": "by",
+     "s": 62.287,
+     "e": 62.607
+    },
+    {
+     "w": "frame.",
+     "s": 62.607,
+     "e": 63.007
+    }
+   ]
+  },
+  {
+   "file": "line16.wav",
+   "start": 63.573,
+   "end": 66.312,
+   "text": "Then it renders and checks itself, right on your own computer.",
+   "ok": true,
+   "heard": "then it renders and checks itself, right on your own computer.",
+   "tries": [
+    {
+     "heard": "then it renders and checks itself, right on your own computer.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Then",
+     "s": 63.573,
+     "e": 63.693
+    },
+    {
+     "w": "it",
+     "s": 63.693,
+     "e": 63.833
+    },
+    {
+     "w": "renders",
+     "s": 63.833,
+     "e": 64.133
+    },
+    {
+     "w": "and",
+     "s": 64.133,
+     "e": 64.353
+    },
+    {
+     "w": "checks",
+     "s": 64.353,
+     "e": 64.573
+    },
+    {
+     "w": "itself,",
+     "s": 64.573,
+     "e": 64.953
+    },
+    {
+     "w": "right",
+     "s": 65.153,
+     "e": 65.373
+    },
+    {
+     "w": "on",
+     "s": 65.373,
+     "e": 65.513
+    },
+    {
+     "w": "your",
+     "s": 65.513,
+     "e": 65.633
+    },
+    {
+     "w": "own",
+     "s": 65.633,
+     "e": 65.793
+    },
+    {
+     "w": "computer.",
+     "s": 65.793,
+     "e": 66.093
+    }
+   ]
+  },
+  {
+   "file": "line17.wav",
+   "start": 67.112,
+   "end": 69.634,
+   "text": "Everything you just watched was made with the Aria skill.",
+   "ok": true,
+   "heard": "Everything you just watched was made with the Aria skill.",
+   "tries": [
+    {
+     "heard": "Everything you just watched was made with the Aria skill.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Everything",
+     "s": 67.112,
+     "e": 67.572
+    },
+    {
+     "w": "you",
+     "s": 67.572,
+     "e": 67.772
+    },
+    {
+     "w": "just",
+     "s": 67.772,
+     "e": 67.932
+    },
+    {
+     "w": "watched",
+     "s": 67.932,
+     "e": 68.252
+    },
+    {
+     "w": "was",
+     "s": 68.252,
+     "e": 68.412
+    },
+    {
+     "w": "made",
+     "s": 68.412,
+     "e": 68.592
+    },
+    {
+     "w": "with",
+     "s": 68.592,
+     "e": 68.732
+    },
+    {
+     "w": "the",
+     "s": 68.732,
+     "e": 68.852
+    },
+    {
+     "w": "Aria",
+     "s": 68.852,
+     "e": 69.232
+    },
+    {
+     "w": "skill.",
+     "s": 69.232,
+     "e": 69.452
+    }
+   ]
+  },
+  {
+   "file": "line18.wav",
+   "start": 70.234,
+   "end": 71.248,
+   "text": "Find it on GitHub.",
+   "ok": true,
+   "heard": "Find it on GitHub.",
+   "tries": [
+    {
+     "heard": "Find it on GitHub.",
+     "ok": true
+    }
+   ],
+   "words": [
+    {
+     "w": "Find",
+     "s": 70.234,
+     "e": 70.454
+    },
+    {
+     "w": "it",
+     "s": 70.454,
+     "e": 70.554
+    },
+    {
+     "w": "on",
+     "s": 70.554,
+     "e": 70.714
+    },
+    {
+     "w": "GitHub.",
+     "s": 70.714,
+     "e": 70.994
+    }
+   ]
+  }
+ ]
+}
