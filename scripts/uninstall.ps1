@@ -24,7 +24,8 @@ function Remove-Path($p) {
 }
 
 # 1. skills and slash commands (only Aria's own files)
-foreach ($s in "aria", "aria-video", "aria-voice", "aria-brag") { Remove-Path (Join-Path $HOME ".claude\skills\$s") }
+$Legacy = @("aria-brag")  # names of earlier releases
+foreach ($s in @("aria", "aria-video", "aria-voice", "aria-launch") + $Legacy) { Remove-Path (Join-Path $HOME ".claude\skills\$s") }
 $commands = Join-Path $HOME ".claude\commands"
 if (Test-Path $commands) {
   foreach ($c in Get-ChildItem $commands -Filter "aria-*.md") { Remove-Path $c.FullName }

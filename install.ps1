@@ -30,12 +30,18 @@ if ($EngineOnly) {
 } else {
   $skills = Join-Path $HOME ".claude\skills"
   New-Item -ItemType Directory -Force $skills | Out-Null
-  foreach ($s in "aria", "aria-video", "aria-voice", "aria-brag") {
+  $Legacy = @("aria-brag")  # names of earlier releases: removed so they do not load twice
+  foreach ($s in $Legacy) {
+    foreach ($old in (Join-Path $skills $s), (Join-Path $HOME ".claude\commands\$s.md")) {
+      if (Test-Path $old) { Remove-Item -Recurse -Force $old }
+    }
+  }
+  foreach ($s in "aria", "aria-video", "aria-voice", "aria-launch") {
     $dst = Join-Path $skills $s
     if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
     Copy-Item -Recurse (Join-Path $Root "skills\$s") $dst
   }
-  Write-Host "aria: skills installed to $skills (aria, aria-video, aria-voice, aria-brag)"
+  Write-Host "aria: skills installed to $skills (aria, aria-video, aria-voice, aria-launch)"
 
   # 2b. slash commands: only aria-*.md files are written; nothing else in the folder is touched
   $commands = Join-Path $HOME ".claude\commands"

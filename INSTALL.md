@@ -32,7 +32,7 @@ the skills and slash commands into `~/.claude` (the older Claude Code route belo
 /plugin marketplace add Abhinav-murugan1/Aria
 /plugin install aria@aria
 ```
-The plugin brings the skills `aria`, `aria-video`, `aria-voice`, `aria-brag` (launch videos) and the `/aria-*`
+The plugin brings the skills `aria`, `aria-video`, `aria-voice`, `aria-launch` (launch videos) and the `/aria-*`
 slash commands (shown as `/aria-short`, or `/aria:aria-short` when another command has the same name). Then run the
 toolchain step above with `-EngineOnly`.
 

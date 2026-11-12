@@ -1,9 +1,9 @@
 ---
-name: aria-brag
-description: Turn a project directory or a website URL into a short (18-22 s) shareable launch video with an expressive Aria narration, an original score, motion built from the real product, a poster frame and ready-to-post share copy. Use when the user says "brag about this", "show off what I built", "make a launch video", "launch teaser for my app/site", "/aria-brag", or points Aria at a repo or URL and wants a video about it.
+name: aria-launch
+description: Turn a project directory or a website URL into a short (18-22 s) shareable launch video with an expressive Aria narration, an original score, motion built from the real product, a poster frame and ready-to-post share copy. Use when the user says "show off what I built", "make a launch video", "launch teaser for my app/site", "/aria-launch", or points Aria at a repo or URL and wants a video about it.
 ---
 
-# Aria brag: launch videos
+# Aria launch videos
 
 You made something. This skill turns it into a 20-second launch video a stranger understands on one viewing and
 wants to share: real product on screen, a narrator with feeling, music cut to the beat, a poster frame and a caption.
@@ -15,7 +15,7 @@ does not earn its place.
 
 ## Usage
 
-`/aria-brag [input] [options]`. Options may come as flags or plain language ("make it vertical, deadpan, no voice").
+`/aria-launch [input] [options]`. Options may come as flags or plain language ("make it vertical, deadpan, no voice").
 
 | option | default |
 |---|---|
@@ -28,14 +28,14 @@ does not earn its place.
 If the input is neither a project nor a URL (or there is no input and the current directory is not a project), ask
 what to make the video about.
 
-Deliverables go to `brag-output/` in the current directory (if it exists, use `brag-output-YYYY-MM-DD-HHmmss/`).
+Deliverables go to `launch-output/` in the current directory (if it exists, use `launch-output-YYYY-MM-DD-HHmmss/`).
 Everything intermediate (the Aria project, downloads, stills, renders) lives in its `work/` subfolder.
 
 ```
-brag-output/
-  brag.mp4          the video (share copy, poster baked in as frame 0)
-  brag.jpg          the poster
-  brag-plan.md      the plan and storyboard
+launch-output/
+  launch.mp4          the video (share copy, poster baked in as frame 0)
+  launch.jpg          the poster
+  launch-plan.md      the plan and storyboard
   share-copy.txt    the caption
   work/             the Aria project: script.json, edit.tsx, media/, stills/, out/
 ```
@@ -101,7 +101,7 @@ the plan.
 
 ## 2. Plan
 
-Write `brag-output/brag-plan.md`, one page:
+Write `launch-output/launch-plan.md`, one page:
 
 - **Angle:** the premise that makes this video about this project and no other.
 - **Hook (first 2 s):** the word, image or motion that earns the next 18 seconds. Decide it first.
@@ -175,8 +175,8 @@ feature fill each scene; `yc-parody` states the problem deadly seriously and eac
 ### The project
 
 ```powershell
-aria new brag-output/work --shape 16:9     # 9:16 for vertical, 1:1 for square
-cd brag-output/work
+aria new launch-output/work --shape 16:9     # 9:16 for vertical, 1:1 for square
+cd launch-output/work
 ```
 This gives `edit.tsx`, `script.json`, `aria/` (never edit it), `media/`, `out/`, `stills/`. Copy the gathered images
 into `media/` and load them with `<Img src={staticFile("logo.png")} />`. Brand fonts: system families by name work;
@@ -250,9 +250,9 @@ aria still edit.tsx 0,45,95,150,210,300,420,560
 Open every PNG. Fix text overflow, collisions, low contrast, anything in a safe area, muddy crossfades and
 half-drawn 3D before rendering. Then:
 ```powershell
-aria make edit.tsx brag                    # out/brag-raw.mp4, out/brag.mp4 (share copy), out/brag.check.json
+aria make edit.tsx launch                    # out/launch-raw.mp4, out/launch.mp4 (share copy), out/launch.check.json
 ```
-P0/P1 findings fail: fix the cause and make again as `brag-v2`, at most three versions, then stop and report what is
+P0/P1 findings fail: fix the cause and make again as `launch-v2`, at most three versions, then stop and report what is
 left. Dark films: `--dark`.
 
 ## 4. Deliver
@@ -262,34 +262,34 @@ left. Dark films: `--dark`.
 Pick the strongest **settled** frame (text fully in, not mid-transition, postable alone): usually the hook line, the
 hero reveal or the name. You know its frame `P` from the storyboard. Platforms build their thumbnail from frame 0 and
 ignore cover-art metadata, so frame 0 must *be* the poster. Replace frame 0 (do not add a frame): same frame count,
-same duration, audio untouched in sync. From `brag-output/`, using the raw render so the video is encoded only once
-(put the last version's name in place of `brag`):
+same duration, audio untouched in sync. From `launch-output/`, using the raw render so the video is encoded only once
+(put the last version's name in place of `launch`):
 
 ```powershell
 # 1. the poster: frame P of the render, full size
-ffmpeg -y -i work/out/brag-raw.mp4 -vf "select=eq(n\,P)" -frames:v 1 -q:v 2 brag.jpg
+ffmpeg -y -i work/out/launch-raw.mp4 -vf "select=eq(n\,P)" -frames:v 1 -q:v 2 launch.jpg
 
 # 2. the video: frame 0 replaced by the poster, every other frame and the audio as rendered, share-copy encode
-ffmpeg -y -i work/out/brag-raw.mp4 -i brag.jpg `
+ffmpeg -y -i work/out/launch-raw.mp4 -i launch.jpg `
   -filter_complex "[0:v][1:v]overlay=0:0:enable='eq(n,0)',format=yuv420p[v]" `
   -map "[v]" -map "0:a?" -c:v libx264 -preset slow -crf 20 -aq-mode 3 `
-  -c:a aac -b:a 192k -movflags +faststart brag.mp4
+  -c:a aac -b:a 192k -movflags +faststart launch.mp4
 ```
 For a `--dark` film, deblock first and use crf 17, as `aria share --dark` does:
 `[0:v]deblock=filter=strong:block=8,gradfun=strength=1.4:radius=16[b];[b][1:v]overlay=0:0:enable='eq(n,0)',format=yuv420p[v]`.
 
 Then confirm nothing moved and the export still passes:
 ```powershell
-ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of csv=p=0 brag.mp4
-ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of csv=p=0 work/out/brag.mp4
-aria check brag.mp4 --manifest work/out/brag.render.json
+ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of csv=p=0 launch.mp4
+ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of csv=p=0 work/out/launch.mp4
+aria check launch.mp4 --manifest work/out/launch.render.json
 ```
-The two frame counts must match. Keep `brag.jpg` beside the video: it is the custom thumbnail for platforms that take
+The two frame counts must match. Keep `launch.jpg` beside the video: it is the custom thumbnail for platforms that take
 one and the `poster` image for any web page that embeds the video.
 
 ### Share copy
 
-`brag-output/share-copy.txt`: one to three sentences, postable as-is, specific to the project, matching the tone, in
+`launch-output/share-copy.txt`: one to three sentences, postable as-is, specific to the project, matching the tone, in
 the project's own words. No "excited to share", no "thrilled to announce", no hashtag pile. Starting points:
 `default` "Made NAME. It does X. [its best line]"; `polished` "Introducing NAME: [its one-liner]."; `yc-parody` "We
 built NAME to solve [the problem, stated seriously]. [a true deadpan fact]"; `chaotic` "[A CLAIM IN CAPS]. NAME is
@@ -298,7 +298,7 @@ built NAME to solve [the problem, stated seriously]. [a true deadpan fact]"; `ch
 
 ### Tell the user
 
-Give the paths (`brag-output/brag.mp4`, `brag.jpg`, `share-copy.txt`, `brag-plan.md`), one sentence on the creative
+Give the paths (`launch-output/launch.mp4`, `launch.jpg`, `share-copy.txt`, `launch-plan.md`), one sentence on the creative
 angle, any stand-ins used, and offer to re-roll a scene, re-voice a line or try another tone.
 
 **Publishing is the user's call.** Do not upload or post anything. If asked to publish: confirm first, upload as
